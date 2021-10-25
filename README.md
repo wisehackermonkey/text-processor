@@ -15,7 +15,12 @@
 ```bash
 npm i -g webpack
 npm i -g webpack-cli
+npm install sass-loader -D
+npm install postcss-loader -D
 
+npm install node-sass -D
+npm install -s bootstrap
+npm install --save jquery popper.js
 npm install monaco-editor-webpack-plugin 
 npm install -g webpack-dev-server
 npm i -D webpack babel-core babel-loader babel-preset-env
