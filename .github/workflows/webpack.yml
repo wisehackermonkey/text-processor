@@ -25,6 +25,7 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm install @babel/core
+        npm install @babel/core 
+        npm install @popperjs/core 
         npx webpack
     
