@@ -25,6 +25,6 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm install -D
+        npm i -D webpack babel-core babel-loader babel-preset-env
         npx webpack
     
