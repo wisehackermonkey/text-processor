@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
 import * as monaco from 'monaco-editor'
 import file_example from "./file_example"
 
@@ -21,11 +22,37 @@ var editor = monaco.editor.create(document.getElementById('container'), {
 });
 // editor.setValue("ji")
 
-var myBinding = editor.addCommand(monaco.KeyCode.F9, function() {
-	alert('F9 pressed!');
+var replace_fn = ()=>{
+  console.log("replace_fn()")
+  const fullRange = editor.getModel().getFullModelRange();
   let delim = document.getElementById("file-delim").value
   let replace_with = document.getElementById("file-delim-replace").value
-
+  
   let current_text = editor.getValue()
-  editor.setValue(current_text.replaceAll(delim,replace_with))
-});
+  
+    editor.executeEdits(null, [{
+      text: current_text.replaceAll(delim,replace_with),
+      range: fullRange
+    }]);
+
+}
+var eventSetNewlineOption = (e)=>{
+  // console.log(e)
+  document.getElementById("file-delim").
+  console.log(eventSetNewlineOption)
+}
+var myBinding = editor.addCommand(monaco.KeyCode.F9, function() {
+	alert('F9 pressed!');
+  replace_fn()
+  });
+
+
+
+
+// main part of code
+var replaceEl = document.getElementById("replace-button")
+replaceEl.addEventListener("click",replace_fn,false)
+
+var radioEl = document.getElementById("newline-radio-buttons")
+radioEl.addEventListener("click",eventSetNewlineOption,false)
+

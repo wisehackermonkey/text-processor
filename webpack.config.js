@@ -1,5 +1,6 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-
+const webpack = require("webpack")
+const jQuery = require("jQuery")
 const path = require('path');
 
 module.exports = {
@@ -24,12 +25,17 @@ module.exports = {
         }, {
             test: /\.ttf$/,
             use: ['file-loader']
-        }
+        },
            
-        ]
+        ],
+           
     },
     plugins: [
-        new MonacoWebpackPlugin()
+        new MonacoWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+          })
     ]
 };
 

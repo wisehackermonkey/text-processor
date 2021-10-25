@@ -8,7 +8,7 @@
 
 <body>
     <div id="container" style="height:400px;border:1px solid black;"></div>
-    <script src="bundle.js"></script>
+
 
     <div>
         <table>
@@ -22,27 +22,56 @@
                 </td>
 
             <tr>
-                <td>
-                    <label for="newline">/n</label><input type="checkbox" name="newline" id="newline">
+                <td> 
+                    <div class="btn-group" id="newline-radio-buttons" data-toggle="buttons">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                None
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                /n
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="option3">
+                            <label class="form-check-label" for="exampleRadios3">
+                                /r/n
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                                value="option4">
+                            <label class="form-check-label" for="exampleRadios4">
+                                remove all /n___ 
+                            </label>
+                        </div>
+
+                    </div>
                 </td>
             </tr>
 
             <tr>
                 <td>
 
-                    <label for="newline-return">/r/n</label><input type="checkbox" name="newline-return"
-                        id="newline-return">
+                    
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="oneline">remove all /n___ </label><input type="checkbox" name="oneline" id="oneline">
                 </td>
             </tr>
             <tr>
 
                 <td>
-                    <button class="btn btn-primary">Replace</button>
+                    <button class="btn btn-primary" id="replace-button">Replace</button>
                 </td>
             </tr>
 
@@ -66,6 +95,8 @@
 
         </li>
     </div>
+
+    <script src="bundle.js"></script>
 </body>
 
 </html>
