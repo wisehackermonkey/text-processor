@@ -10,7 +10,7 @@
 
 # Quick start
 ### __________________
-<!-- 
+
 ##### __________________________
 ```bash
 npm i -g webpack
@@ -30,7 +30,7 @@ npm install
 npm run build
 npm run start
 ``` 
--->
+
  
 # Links
 ### how to use webpack dev server

@@ -1,5 +1,9 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const webpack = require("webpack")
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 // const jQuery = require("jQuery")
 const path = require('path');
 
@@ -14,7 +18,14 @@ module.exports = {
         path: path.resolve('dist'),
         filename: 'bundle.js'
     },
-
+    optimization: {
+        minimize: true,
+        minimizer: [
+          new HtmlMinimizerPlugin(),
+          new CssMinimizerPlugin(),
+          new TerserPlugin(),
+        ],
+      },
     module: {
         rules: [{
             test: /\.js$/,
