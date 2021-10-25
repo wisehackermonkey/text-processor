@@ -1,4 +1,12 @@
-module.exports = {example_text: `
+module.exports = {example_text:`
+Minimal set for phonemic tone in Mandarin Chinese
+Tone number	1	2	3	4	5
+Hanzi	媽	麻	馬	罵	嗎
+Pinyin	mā	má	mǎ	mà	ma
+IPA	[má]	[mǎ]	[mà][a]	[mâ]	[ma]
+Gloss	mother	hemp	horse	scold	question particle
+`
+    ,example_text2: `
 Here are the exact percentages:
 
 ə / 11.49%

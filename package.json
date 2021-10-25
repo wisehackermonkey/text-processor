@@ -7,9 +7,11 @@
         "css-loader": "5.2.4",
         "file-loader": "^6.2.0",
         "jquery": "^3.6.0",
+        "jQuery": "^1.7.4",
         "monaco-editor": "0.26.1",
         "monaco-editor-webpack-plugin": "^4.2.0",
         "popper.js": "^1.16.1",
+        "randexp": "^0.5.3",
         "style-loader": "2.0.0",
         "webpack-dev-server": "^4.3.1"
     },

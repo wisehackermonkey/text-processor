@@ -22,66 +22,152 @@
                 </td>
 
             <tr>
-                <td> 
+                <td>
                     <div class="btn-group" id="newline-radio-buttons" data-toggle="buttons">
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                value="option1" checked>
+                                value="" checked>
                             <label class="form-check-label" for="exampleRadios1">
                                 None
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2">
+                                value="/\n/g">
                             <label class="form-check-label" for="exampleRadios2">
                                 /n
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                                value="option3">
+                                value="/\r\n/g">
                             <label class="form-check-label" for="exampleRadios3">
                                 /r/n
                             </label>
                         </div>
+
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
-                                value="option4">
-                            <label class="form-check-label" for="exampleRadios4">
-                                remove all /n___ 
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="/\t/g">
+                            <label class="form-check-label" for="exampleRadios3">
+                                Tabs -> CSV ","
                             </label>
                         </div>
+                        
 
                     </div>
                 </td>
             </tr>
 
-            <tr>
-                <td>
 
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-            <tr>
+            <td>
+                <button class="btn btn-primary" id="replace-all-newlilnes-button">Replace All Newlines /n</button>
 
-                <td>
-                    <button class="btn btn-primary" id="replace-button">Replace</button>
-                </td>
+                <button class="btn btn-primary" id="replace-button">Replace</button>
+            </td>
             </tr>
 
             </tr>
             <tr>
                 <td>
-                    <label for="patern">Pattern</label>
+                    <label for="pattern">Pattern</label>
 
-                    <textarea name="pattern" id="patern" cols="30" rows="5"></textarea>
+                    <textarea name="pattern" id="pattern" placeholder="/^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}$/"
+                        cols="30" rows="5"></textarea>
                 </td>
+                <td>
+                    <button class="btn btn-primary" id="pattern-btn">Generate</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" id="pattern-paste-btn">Paste To Selection</button>
+                </td>
+
+                <td>
+                    <label for="pattern-output">Pattern Output</label>
+
+                    <textarea name="pattern-output" id="pattern-output" placeholder="FSXDx8017T" cols="5"
+                        rows="2"></textarea>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn-group" id="regex-examples-buttons" data-toggle="buttons">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples1"
+                                value="" checked>
+                            <label class="form-check-label" for="regexExamples1">
+                                None
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples2"
+                                value="/([0-9]{1,7})/g">
+                            <label class="form-check-label" for="regexExamples2">
+                                Numbers Int "6820278"
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples2"
+                                value="/[-+]?[0-9]{0,16}(\.[0-9]{1,6})?/">
+                            <label class="form-check-label" for="regexExamples2">
+                                Numbers Float "2244235192957.124291"
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples2"
+                                value="/([0-9]){3}-([0-9]){3}-([0-9]){4}/">
+                            <label class="form-check-label" for="regexExamples2">
+                                Phone Number "230-896-1111"
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples3"
+                                value="/([a-zA-Z]){4}([a-z]){10}([A-Z]){4}/">
+                            <label class="form-check-label" for="regexExamples3">
+                                Letters "kMRJkgosocialdIEMY"
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples4"
+                                value="/^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}$/">
+                            <label class="form-check-label" for="regexExamples4">
+                                Numbers&Letters AJppm8031N
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples4"
+                                value="/(19|20)\d\d([/])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])/">
+                            <label class="form-check-label" for="regexExamples4">
+                                Date "2046/11/07"
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples4"
+                                value="/[a-z0-9._+-]{1,20}@[a-z0-9]{3,15}\.[a-z]{2,4}/">
+                            <label class="form-check-label" for="regexExamples4">
+                                Email "ve5@swirxng1.xx"
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regexExamples" id="regexExamples4"
+                                value="/[0-9]{3}\.[0-9]{3}\.[0-9]{3}/">
+                            <label class="form-check-label" for="regexExamples4">
+                                IP Address "192.168.1.254"
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            <tr>
+                <td>
+                    <a href="https://fent.github.io/randexp.js/">More examples Using randexp.js library</a>
+                </td>
+            </tr>
+
             </tr>
 
         </table>

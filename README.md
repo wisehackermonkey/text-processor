@@ -17,6 +17,7 @@ npm i -g webpack
 npm i -g webpack-cli
 npm install sass-loader -D
 npm install postcss-loader -D
+npm install --save randexp
 
 npm install node-sass -D
 npm install -s bootstrap
@@ -35,7 +36,13 @@ npm run start
 ### how to use webpack dev server
 `https://webpack.js.org/configuration/dev-server/`
 
- 
+ ### cool conlang generator 
+ [A Fantasy Language Generator: Vulgarlang | Conlang Generator](https://www.vulgarlang.com/)
+ ### cool conlang generator
+ [Awkwords - word generator](http://akana.conlang.org/tools/awkwords/)
+
+ ### great text visualization tool
+ [Voyant Tools](https://voyant-tools.org/)
  
 -----------------
 # Contributors
