@@ -59,13 +59,3 @@ jobs:
         dry_run: true # optional, default is false
         # Enable verbose output
 #         verbose: # optional, default is false
-    - name: Commit files to repo
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Add changes" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
