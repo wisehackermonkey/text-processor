@@ -28,11 +28,17 @@ jobs:
         npm install @babel/core 
         npm install @popperjs/core 
         npx webpack
-    - name: GitHub Pages
-      # You may pin to the exact commit or the version.
-      # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
-      uses: crazy-max/ghaction-github-pages@v2.5.0
+        npm run build
+    - name: Deploy to GH Page
+      uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
+        branch: gh-pages
+        folder: dist
+#     - name: GitHub Pages
+#       # You may pin to the exact commit or the version.
+#       # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
+#       uses: crazy-max/ghaction-github-pages@v2.5.0
+#       with:
         # Git domain (default github.com)
 #         domain: # optional, default is github.com
         # GitHub repository where assets will be deployed (default $GITHUB_REPOSITORY)
