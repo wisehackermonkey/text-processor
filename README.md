@@ -13,37 +13,25 @@
 <!-- 
 ##### __________________________
 ```bash
+npm i -g webpack
+npm i -g webpack-cli
+
+npm install monaco-editor-webpack-plugin 
+npm install -g webpack-dev-server
+npm i -D webpack babel-core babel-loader babel-preset-env
+
+npm install
+npm run build
+npm run start
 ``` 
 -->
+ 
+# Links
+### how to use webpack dev server
+`https://webpack.js.org/configuration/dev-server/`
 
-# Summary
-<!-- ### -  *[Quick start](#Quick-start)*
-### -  *[Installation](#Installation)*
-### -  *[For developers](#For-developers)* -->
-### -  *[Contributors](#Contributors)*
-### -  *[License](#License)*
-
-
-
-
-# Installation
-```bash
-```
-
-<!-- ----------------- -->
-<!-- # Screenshots -->
-<!-- - <img src="assets/_____________" width="400">  -->
-<!-- -  -->
-
-
-
-<!-- SETUP -->
------------------
-# For developers
-### 
-```bash
-```
-
+ 
+ 
 -----------------
 # Contributors
 

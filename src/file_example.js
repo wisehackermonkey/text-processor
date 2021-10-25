@@ -1,4 +1,4 @@
-var example_text = `
+module.exports = {example_text: `
 Here are the exact percentages:
 
 ə / 11.49%
@@ -40,4 +40,4 @@ aʊ / 0.50%
 θ / 0.41%
 ɔɪ / 0.10%
 ʒ / 0.07%F
-`;
+`};
