@@ -1,6 +1,6 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const webpack = require("webpack")
-const jQuery = require("jQuery")
+// const jQuery = require("jQuery")
 const path = require('path');
 
 module.exports = {
