@@ -30,6 +30,7 @@ jobs:
         npm install @popperjs/core 
         npx webpack
         npm run build
+        cp ./public/index.html ./dist/index.html
     - name: Deploy to GH Page
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
@@ -61,7 +62,7 @@ jobs:
         # Write the given domain name to the CNAME file
 #         fqdn: # optional
         # Allow Jekyll to build your site
-#         jekyll: false # optional, default is true
+        jekyll: false # optional, default is true
         # If enabled, nothing will be pushed
 #         dry_run: false # optional, default is false
         # Enable verbose output
