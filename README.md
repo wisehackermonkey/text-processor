@@ -30,7 +30,7 @@ npm install
 npm run build
 npm run start
 ``` 
-
+# Open browser to http://localhost:8080/
  
 # Links
 ### how to use webpack dev server

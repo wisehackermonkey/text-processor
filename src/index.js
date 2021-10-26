@@ -13,7 +13,7 @@ var current_regex = new RegExp("")
 
 var editor = monaco.editor.create(document.getElementById('container'), {
   value: file_example.example_text,
-  language: 'javascript',
+  language: 'csv',
   theme: 'vs-dark',
   wordWrap: 'wordWrapColumn',
   wordWrapColumn: 120,
