@@ -12,7 +12,7 @@ module.exports = {
         './src/index.js',
         "./src/scss/app.scss",
     ],
-    mode: 'development',
+    // mode: 'development',
 
     output: {
         path: path.resolve('dist'),
