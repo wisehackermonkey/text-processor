@@ -19,7 +19,7 @@
                     <input type="text" name="File Delimeter" id="file-delim">
                     <label for="file-delim">replace with</label>
                     <!-- <input type="text" name="replace with" id="file-delim-replace"> -->
-                    <textarea name="replace with"  id="file-delim-replace"  cols="20" rows="1"></textarea>
+                    <textarea name="replace with" id="file-delim-replace" cols="20" rows="1"></textarea>
                 </td>
 
             <tr>
@@ -37,7 +37,15 @@
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
                                 value="/\n/g">
                             <label class="form-check-label" for="exampleRadios2">
-                                /n
+                               /n
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="/([\n|\s]{2,100})/g">
+                            <label class="form-check-label" for="exampleRadios2">
+                                multiple newlines
                             </label>
                         </div>
                         <div class="form-check">
@@ -49,24 +57,59 @@
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
                                 value="/\t/g">
                             <label class="form-check-label" for="exampleRadios3">
                                 Tabs -> CSV ","
                             </label>
                         </div>
-                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                                value="ENDING">
+                            <label class="form-check-label" for="exampleRadios3">
+                                Fix CSV endings -> " \n "
+                            </label>
+                        </div>
 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                                value="/\n[^0-9]/g">
+                            <label class="form-check-label" for="exampleRadios3">
+                                remove newlines that dont start with a number
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                                value="/\n[^a-zA-Z]/g">
+                            <label class="form-check-label" for="exampleRadios3">
+                                remove newlines that dont start with a letter
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                                value="/[0-9]{1,4}[/-][0-9]{1,2}[/-][0-9]{1,4}/g">
+                            <label class="form-check-label" for="exampleRadios3">
+                                remove date 11/20/2022 or 11-20-2022 
+                            </label>
+                        </div>
                     </div>
                 </td>
             </tr>
-
 
             <td>
                 <button class="btn btn-primary" id="replace-all-newlilnes-button">Replace All Newlines /n</button>
 
                 <button class="btn btn-primary" id="replace-button">Replace</button>
             </td>
+            <tr>
+                <td>
+                    <input type="button" value="CSV validator Online"
+                        onclick="window.open('https://www.toolkitbay.com/tkb/tool/csv-validator')" />
+
+                </td>
+            </tr>
             </tr>
 
             </tr>

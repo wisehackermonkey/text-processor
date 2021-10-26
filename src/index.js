@@ -13,10 +13,10 @@ var current_regex = new RegExp("")
 
 var editor = monaco.editor.create(document.getElementById('container'), {
   value: file_example.example_text,
-  language: 'csv',
+  language: 'javascript',
   theme: 'vs-dark',
-  wordWrap: 'wordWrapColumn',
-  wordWrapColumn: 120,
+  // wordWrap: 'wordWrapColumn',
+  // wordWrapColumn: 120,
 
   // Set this to false to not auto word wrap minified files
   wordWrapMinified: true,
@@ -55,14 +55,20 @@ var eventSetNewlineOption = (e) => {
   // set "filter by input field to append current radio selection"
   
   let radioSelection = h.getRadioBtnSelectionValue("exampleRadios")
+  h.getbyid("file-delim-replace").value =''
   if (radioSelection === "") {
   return
   }
+  
   if(radioSelection === "/\\t/g"){
     h.getbyid("file-delim-replace").value ='","'
-  }else{
-    h.getbyid("file-delim-replace").value =''
   }
+
+  if(radioSelection === "ENDING"){
+    radioSelection = "/\\n/g"
+    h.getbyid("file-delim-replace").value ='"\n"'
+  }
+
   h.getbyid("file-delim").value = radioSelection
 }
 var eventSetRegexExampleButtons = (e) => {
@@ -110,7 +116,15 @@ var myBinding = editor.addCommand(monaco.KeyCode.F9, function () {
 
   // console.log(current_regex)
   // console.log(h.getRadioBtnSelection("regexExamples"))
-  replace_fn()
+  
+  let matchs =editor.getModel().findMatches('m', true, true, false, null, true, 1)
+  var decorations = editor.deltaDecorations(editor.getModel().getAllDecorations(), [
+    { range: matchs[0].range, options: { isWholeLine: true, linesDecorationsClassName: 'myLineDecoration' }},
+  ]);
+ editor.ISingleEditOperation({range:{startLineNumber: 3, startColumn: 15, endLineNumber: 3, endColumn: 16},text:"works"})
+  console.log( matchs)
+  console.log( { range: matchs[0].range, options: { isWholeLine: true, linesDecorationsClassName: 'myLineDecoration' }})
+    // replace_fn()
 });
 
 
