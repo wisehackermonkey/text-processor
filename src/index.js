@@ -121,7 +121,7 @@ var myBinding = editor.addCommand(monaco.KeyCode.F9, function () {
   var decorations = editor.deltaDecorations(editor.getModel().getAllDecorations(), [
     { range: matchs[0].range, options: { isWholeLine: true, linesDecorationsClassName: 'myLineDecoration' }},
   ]);
- editor.ISingleEditOperation({range:{startLineNumber: 3, startColumn: 15, endLineNumber: 3, endColumn: 16},text:"works"})
+ editor.ISingleEditOperation({range:{startLineNumber: 3, startColumn: 15, endLineNumber: 3, endColumn: 16},text:"works  "})
   console.log( matchs)
   console.log( { range: matchs[0].range, options: { isWholeLine: true, linesDecorationsClassName: 'myLineDecoration' }})
     // replace_fn()
